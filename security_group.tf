@@ -1,13 +1,13 @@
 resource "aws_security_group" "swarm" {
   name = "swarm-group-${var.workspace}"
 
-  ingress {
-    from_port   = "0"
-    to_port     = "0"
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-    self        = true
-  }
+  # ingress {
+  #   from_port   = "0"
+  #   to_port     = "0"
+  #   protocol    = "-1"
+  #   cidr_blocks = ["0.0.0.0/0"]
+  #   self        = true
+  # }
 
   ingress {
     from_port   = var.http_port
